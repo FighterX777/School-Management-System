@@ -48,6 +48,10 @@ header {
     color: #777;
 }
 
+.notification {
+    margin-left: auto;
+}
+
 .notification img {
     width: 24px;
     height: 24px;
@@ -93,7 +97,7 @@ main {
     color: #aaa;
 }
 
-/* Footer Styling */
+
 footer {
     background-color: #333;
     color: #fff;
@@ -107,19 +111,20 @@ footer p {
     font-size: 14px;
 }
 
-/* MEDIA QUERIES FOR RESPONSIVENESS */
 
-/* For screens smaller than 768px (mobile devices) */
 @media (max-width: 768px) {
     .container {
         width: 100%;
         padding: 10px;
     }
 
+  
     header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center;
         margin-bottom: 20px;
+        position: relative;
     }
 
     .student-info h1 {
@@ -130,24 +135,47 @@ footer p {
         font-size: 12px;
     }
 
+    .notification {
+        position: absolute; 
+        top: 0; 
+        right: 10px; 
+    }
+
     .notification img {
         width: 20px;
         height: 20px;
     }
 
-    /* Hide the cards section on mobile screens */
+    
     main {
-        display: none;
+        grid-template-columns: 1fr; 
+        gap: 15px;
     }
 
-    /* Adjust footer styling for smaller screens */
+    .card {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .card span {
+        font-size: 10px;
+    }
+
+    
     footer {
         padding: 15px 0;
         font-size: 12px;
     }
 }
 
-/* For tablets or slightly larger screens (768px - 1024px) */
 @media (max-width: 1024px) {
     main {
         grid-template-columns: repeat(2, 1fr);
@@ -167,12 +195,12 @@ footer p {
     }
 }
 
-
 .parent-login-button {
     width: 100%;
     padding: 10px;
     border-radius: 4px;
-    margin: 10px;
+    margin-left: 3px;
+    margin-top: 100px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -180,4 +208,3 @@ footer p {
     color: white;
     border: none;
 }
-
